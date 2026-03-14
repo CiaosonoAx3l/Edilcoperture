@@ -9,21 +9,15 @@
 </head>
 <body>
 
-<!-- TOP BAR 
-<div class="topbar">
-  <span>📧 <a href="mailto:info@edilcoperture.it">info@edilcoperture.it</a></span>
-  <span>📧 <a href="mailto:tecnico@edilcoperture.it">tecnico@edilcoperture.it</a></span>
-  <span>📍 Via Firenze, 21 – 37053 Cerea (VR)</span>
-</div> -->
-
 <!-- NAVBAR -->
 <nav>
   <div class="nav-logo">EDIL<span>COPERTURE</span></div>
+
   <ul class="nav-links">
     <li><a href="#" class="active">Home</a></li>
     <li><a href="#">Chi siamo</a></li>
     <li>
-      <a href="#">Servizi ▾</a>
+      <a href="#">Servizi &#9662;</a>
       <ul class="dropdown">
         <li><a href="#">Coperture Industriali</a></li>
         <li><a href="#">Coperture Civili</a></li>
@@ -36,16 +30,45 @@
     <li><a href="#">Certificazioni</a></li>
     <li><a href="#">Contatti</a></li>
   </ul>
-  <div class="nav-phone">☎ 0442 081 657</div>
+
+  <div class="nav-phone">&#9990; 0442 081 657</div>
+
+  <!-- Hamburger solo mobile -->
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Menu mobile popup -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#" onclick="closeMobile()">Home</a></li>
+    <li><a href="#" onclick="closeMobile()">Chi siamo</a></li>
+    <li class="mobile-has-sub">
+      <a href="#" onclick="toggleMobileSub(event)">Servizi &#9662;</a>
+      <ul class="mobile-sub">
+        <li><a href="#" onclick="closeMobile()">Coperture Industriali</a></li>
+        <li><a href="#" onclick="closeMobile()">Coperture Civili</a></li>
+        <li><a href="#" onclick="closeMobile()">Sicurezza</a></li>
+        <li><a href="#" onclick="closeMobile()">Energie Rinnovabili</a></li>
+        <li><a href="#" onclick="closeMobile()">Bonifica Amianto</a></li>
+      </ul>
+    </li>
+    <li><a href="#" onclick="closeMobile()">Realizzazioni</a></li>
+    <li><a href="#" onclick="closeMobile()">Certificazioni</a></li>
+    <li><a href="#" onclick="closeMobile()">Contatti</a></li>
+  </ul>
+  <a href="tel:+390442081657" class="mobile-phone">&#9990;&nbsp;0442&nbsp;081&nbsp;657</a>
+</div>
+<div class="mobile-overlay" id="mobileOverlay" onclick="closeMobile()"></div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>EDILCOPERTURE SRL – DAL 1988</h1>
+    <h1>EDILCOPERTURE SRL &ndash; DAL 1988</h1>
     <h2>
       Coperture di Grandi Sedi Logistiche<br>
-      <span>Impermeabilizzazioni · Amianto · Fotovoltaico</span>
+      <span>Impermeabilizzazioni &middot; Amianto &middot; Fotovoltaico</span>
     </h2>
     <div class="hero-btns">
       <a href="#" class="btn btn-primary">Chi siamo</a>
@@ -59,8 +82,6 @@
   <h3>Certificazioni</h3>
   <div class="cert-badge"><img src="immagini/esna.png" alt="ESNA"></div>
   <div class="cert-badge"><img src="immagini/iso_9001.png" alt="ISO 9001"></div>
-  <!--<div class="cert-badge"><span class="icon">✅</span> Azienda Certificata</div>
-  <div class="cert-badge"><span class="icon">⭐</span> Dal 1988</div>-->
 </div>
 
 <!-- SERVIZI -->
@@ -73,52 +94,48 @@
 
   <div class="servizi-grid">
     <div class="servizio-card fade-in">
-      <div class="card-bg card-1" style="height:260px;border-radius:2px;"></div>
+      <div class="card-bg card-1"></div>
       <div class="card-overlay">
-        <div class="card-icon">🏭</div>
+        <div class="card-icon">&#127981;</div>
         <h3>Coperture Industriali</h3>
         <p>Realizzazione e rifacimento di grandi coperture per insediamenti logistici e industriali.</p>
-        <a href="#" class="card-cta">Clicca qui →</a>
+        <a href="#" class="card-cta">Clicca qui &rarr;</a>
       </div>
     </div>
-
     <div class="servizio-card fade-in">
-      <div class="card-bg card-2" style="height:260px;border-radius:2px;"></div>
+      <div class="card-bg card-2"></div>
       <div class="card-overlay">
-        <div class="card-icon">🏠</div>
+        <div class="card-icon">&#127968;</div>
         <h3>Coperture Civili</h3>
-        <p>Tetti per abitazioni civili con coppi, tegole e materiali innovativi di alta qualità.</p>
-        <a href="#" class="card-cta">Clicca qui →</a>
+        <p>Tetti per abitazioni civili con coppi, tegole e materiali innovativi di alta qualit&agrave;.</p>
+        <a href="#" class="card-cta">Clicca qui &rarr;</a>
       </div>
     </div>
-
     <div class="servizio-card fade-in">
-      <div class="card-bg card-3" style="height:260px;border-radius:2px;"></div>
+      <div class="card-bg card-3"></div>
       <div class="card-overlay">
-        <div class="card-icon">☣️</div>
+        <div class="card-icon">&#9762;&#65039;</div>
         <h3>Bonifica Amianto</h3>
         <p>Rimozione, smaltimento e bonifica dell'amianto con personale qualificato e autorizzato.</p>
-        <a href="#" class="card-cta">Clicca qui →</a>
+        <a href="#" class="card-cta">Clicca qui &rarr;</a>
       </div>
     </div>
-
     <div class="servizio-card fade-in">
-      <div class="card-bg card-4" style="height:260px;border-radius:2px;"></div>
+      <div class="card-bg card-4"></div>
       <div class="card-overlay">
-        <div class="card-icon">☀️</div>
+        <div class="card-icon">&#9728;&#65039;</div>
         <h3>Energie Rinnovabili</h3>
         <p>Installazione di impianti fotovoltaici integrati su ogni tipologia di copertura.</p>
-        <a href="#" class="card-cta">Clicca qui →</a>
+        <a href="#" class="card-cta">Clicca qui &rarr;</a>
       </div>
     </div>
-
     <div class="servizio-card fade-in">
-      <div class="card-bg card-5" style="height:260px;border-radius:2px;"></div>
+      <div class="card-bg card-5"></div>
       <div class="card-overlay">
-        <div class="card-icon">🦺</div>
+        <div class="card-icon">&#129686;</div>
         <h3>Sicurezza</h3>
         <p>Linee vita, adeguamenti antisismici e sistemi di sicurezza per ogni tipo di copertura.</p>
-        <a href="#" class="card-cta">Clicca qui →</a>
+        <a href="#" class="card-cta">Clicca qui &rarr;</a>
       </div>
     </div>
   </div>
@@ -134,27 +151,27 @@
 
   <div class="projects-grid">
     <div class="project-item fade-in">
-      <div class="proj-bg proj-1" style="height:220px;"></div>
+      <div class="proj-bg proj-1"></div>
       <div class="project-label"><span>Coperture Industriali</span>Rifacimento capannone logistico</div>
     </div>
     <div class="project-item fade-in">
-      <div class="proj-bg proj-2" style="height:220px;"></div>
+      <div class="proj-bg proj-2"></div>
       <div class="project-label"><span>Bonifica Amianto</span>Rimozione eternit completa</div>
     </div>
     <div class="project-item fade-in">
-      <div class="proj-bg proj-3" style="height:220px;"></div>
+      <div class="proj-bg proj-3"></div>
       <div class="project-label"><span>Fotovoltaico</span>Impianto fotovoltaico integrato</div>
     </div>
     <div class="project-item fade-in">
-      <div class="proj-bg proj-4" style="height:220px;"></div>
+      <div class="proj-bg proj-4"></div>
       <div class="project-label"><span>Impermeabilizzazioni</span>Impermeabilizzazione terrazza</div>
     </div>
     <div class="project-item fade-in">
-      <div class="proj-bg proj-5" style="height:220px;"></div>
+      <div class="proj-bg proj-5"></div>
       <div class="project-label"><span>Coperture Civili</span>Tetto civile con coppi in cotto</div>
     </div>
     <div class="project-item fade-in">
-      <div class="proj-bg proj-6" style="height:220px;"></div>
+      <div class="proj-bg proj-6"></div>
       <div class="project-label"><span>Sicurezza</span>Installazione linee vita</div>
     </div>
   </div>
@@ -169,11 +186,9 @@
   <div class="chi-siamo-text fade-in">
     <div class="label">La nostra storia</div>
     <h2>Chi Siamo</h2>
-    <p>L'Edilcoperture srl nasce nel <strong style="color:var(--orange)">1988</strong> dalla pluriennale esperianza dei soci, in questi anni acquisisce competenze specifiche nel settore delle impermeabilizzazioni, coperture di grandi insediamenti logistici, rimozione amianto, ed impianti fotovoltaici. </p>
-    <p>L’azienda si avvale di proprio personale con anni di esperienza nelle specifiche lavorazioni, oltre a tutta l’attrezzatura necessaria alle lavorazioni la logistica ed il servizio di assistenza e manutenzione.</p> 
-    <p>Si effettuano anche interventi urgenti serali o notturni in caso di calamità atmosferiche, allo scopo di ridurre i danni causati dall’evento. Il personale tecnico è sempre a disposizione per sopralluoghi e preventivi.</p>
-
-</p>
+    <p>L'Edilcoperture srl nasce nel <strong style="color:var(--orange)">1988</strong> dalla pluriennale esperienza dei soci, in questi anni acquisisce competenze specifiche nel settore delle impermeabilizzazioni, coperture di grandi insediamenti logistici, rimozione amianto, ed impianti fotovoltaici.</p>
+    <p>L'azienda si avvale di proprio personale con anni di esperienza nelle specifiche lavorazioni, oltre a tutta l'attrezzatura necessaria alle lavorazioni, la logistica ed il servizio di assistenza e manutenzione.</p>
+    <p>Si effettuano anche interventi urgenti serali o notturni in caso di calamit&agrave; atmosferiche, allo scopo di ridurre i danni causati dall'evento. Il personale tecnico &egrave; sempre a disposizione per sopralluoghi e preventivi.</p>
     <div class="stats-row">
       <div class="stat">
         <div class="num">35+</div>
@@ -189,10 +204,10 @@
       </div>
     </div>
     <br>
-    <a href="#" class="btn btn-primary">Scopri di più</a>
+    <a href="#" class="btn btn-primary">Scopri di pi&ugrave;</a>
   </div>
   <div class="chi-siamo-visual fade-in">
-    <div class="big-icon" style="color:#e8500a;font-size:100px;">🏗️</div>
+    <div class="big-icon">&#127959;&#65039;</div>
   </div>
 </section>
 
@@ -208,7 +223,7 @@
       <h2>Contatti</h2>
 
       <div class="contact-item">
-        <div class="contact-icon">📞</div>
+        <div class="contact-icon">&#128222;</div>
         <div>
           <strong>Telefono</strong>
           <p><a href="tel:+390442081657">0442 081 657</a></p>
@@ -216,7 +231,7 @@
       </div>
 
       <div class="contact-item">
-        <div class="contact-icon">📧</div>
+        <div class="contact-icon">&#128231;</div>
         <div>
           <strong>Email</strong>
           <p><a href="mailto:info@edilcoperture.it">info@edilcoperture.it</a></p>
@@ -225,7 +240,7 @@
       </div>
 
       <div class="contact-item">
-        <div class="contact-icon">📍</div>
+        <div class="contact-icon">&#128205;</div>
         <div>
           <strong>Indirizzo</strong>
           <p>Via Firenze, 21<br>37053 Cerea (VR)</p>
@@ -262,9 +277,8 @@
       <div class="footer-logo">EDIL<span>COPERTURE</span></div>
       <p>Edilcoperture srl<br>Via Firenze, 21<br>37053 Cerea (VR)<br>P.IVA: 02037680234</p>
       <br>
-      <p>Tel: <a href="tel:+390442081657" style="color:var(--orange)">0442 081 657 </a></p>
+      <p>Tel: <a href="tel:+390442081657" style="color:var(--orange)">0442 081 657</a></p>
     </div>
-
     <div class="footer-col">
       <h4>Servizi</h4>
       <ul>
@@ -276,7 +290,6 @@
         <li><a href="#">Impermeabilizzazioni</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>Azienda</h4>
       <ul>
@@ -288,21 +301,19 @@
         <li><a href="#">Privacy Policy</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>Aree di Intervento</h4>
-      <p style="font-size:13px;line-height:1.9;">Verona · Vicenza · Padova<br>Brescia · Modena · Bologna<br>Reggio Emilia · Trentino<br>Lombardia · Piemonte<br>Emilia Romagna · Toscana</p>
+      <p style="font-size:13px;line-height:1.9;">Verona &middot; Vicenza &middot; Padova<br>Brescia &middot; Modena &middot; Bologna<br>Reggio Emilia &middot; Trentino<br>Lombardia &middot; Piemonte<br>Emilia Romagna &middot; Toscana</p>
     </div>
   </div>
-
   <div class="footer-bottom">
-    <p>Copyright 2024 © Edilcoperture srl – Tutti i diritti riservati | P.IVA: 02037680234 | <a href="#">Privacy Policy</a></p>
+    <p>Copyright 2024 &copy; Edilcoperture srl &ndash; Tutti i diritti riservati | P.IVA: 02037680234 | <a href="#">Privacy Policy</a></p>
   </div>
 </footer>
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>Per fornire le migliori esperienze, utilizziamo tecnologie come i cookie per memorizzare e/o accedere alle informazioni del dispositivo. Il consenso a queste tecnologie ci permetterà di elaborare dati come il comportamento di navigazione o ID unici su questo sito. <a href="#">Leggi l'informativa</a>.</p>
+  <p>Per fornire le migliori esperienze, utilizziamo tecnologie come i cookie per memorizzare e/o accedere alle informazioni del dispositivo. Il consenso a queste tecnologie ci permetter&agrave; di elaborare dati come il comportamento di navigazione o ID unici su questo sito. <a href="#">Leggi l'informativa</a>.</p>
   <div class="cookie-buttons">
     <button class="cookie-btn secondary" onclick="document.getElementById('cookieBanner').style.display='none'">Nega</button>
     <button class="cookie-btn" onclick="document.getElementById('cookieBanner').style.display='none'">Accetta</button>
@@ -310,7 +321,37 @@
 </div>
 
 <script>
-  // Scroll fade-in
+  /* ── HAMBURGER MENU ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.contains('active') ? closeMobile() : openMobile();
+  });
+
+  function openMobile() {
+    hamburger.classList.add('open');
+    mobileMenu.classList.add('active');
+    mobileOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobile() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('active');
+    mobileOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function toggleMobileSub(e) {
+    e.preventDefault();
+    const sub = e.target.nextElementSibling;
+    sub.classList.toggle('open');
+    e.target.textContent = sub.classList.contains('open') ? 'Servizi \u25b4' : 'Servizi \u25be';
+  }
+
+  /* ── SCROLL FADE-IN ── */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
