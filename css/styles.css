@@ -774,7 +774,7 @@ footer {
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 768px) {
+@media (max-width: 982px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
   .nav-phone { display: none; }
