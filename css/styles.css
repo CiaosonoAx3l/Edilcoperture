@@ -786,6 +786,17 @@ footer {
   footer { padding: 40px 20px 20px; }
   .cookie-banner { padding: 16px 20px; }
   .certif-bar { gap: 20px; }
+
+  .certif-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .certif-bar h3 {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Scroll animations */
